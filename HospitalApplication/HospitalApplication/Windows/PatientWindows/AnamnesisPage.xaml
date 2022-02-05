@@ -1,0 +1,61 @@
+﻿<Page x:Class="HospitalApplication.Windows.PatientWindows.AnamnesisPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:p="clr-namespace:HospitalApplication.Properties"
+      xmlns:local="clr-namespace:HospitalApplication.Windows.PatientWindows"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="AnamnesisPage"
+      Style="{StaticResource PageStyle}">
+
+    <Grid>
+        <StackPanel Margin="10">
+            <Label Content="{x:Static p:Resources.HomeAnamnesis}" HorizontalAlignment="Center" FontSize="30"/>
+            <Button Content="{x:Static p:Resources.AnamnesisInfo}" Width="100" x:Name="AnamneseInformation" Click="AnamneseInformation_Click"/>
+            <ListView Margin="0 10" Name="lvUsers" Height="150">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF717371" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FF717371" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridView.ColumnHeaderContainerStyle>
+                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                <Setter Property="Background" Value="#014546" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Style>
+                        </GridView.ColumnHeaderContainerStyle>
+                        <GridViewColumn Header="{x:Static p:Resources.THPatient}" DisplayMemberBinding="{Binding PatientsId}"/>
+                        <GridViewColumn Header="{x:Static p:Resources.THDate}" DisplayMemberBinding="{Binding Date}"/>
+                        <GridViewColumn Header="{x:Static p:Resources.THAppointment}" DisplayMemberBinding="{Binding ExaminationId}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="{x:Static p:Resources.SearchById}"/>
+                <TextBox TextChanged="TextBox_TextChanged" Width="100" Name="Search"/>
+            </StackPanel>
+            
+            <Grid Margin="150 20 150 0" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="300" />
+                </Grid.ColumnDefinitions>
+                <Label Content="{x:Static p:Resources.AnamnesisComment}" Grid.Column="0"/>
+                <TextBox VerticalScrollBarVisibility="Auto" Grid.Column="1" TextWrapping="Wrap" x:Name="AnamnesisComment" Height="90"/>
+            </Grid>
+            <Button Content="{x:Static p:Resources.AnamnesisSubmitComment}" Width="170" Margin="20" x:Name="SubmitComment" Click="SubmitComment_Click"/>
+            <Button Content="{x:Static p:Resources.AnamnesisCreateNotification}" Width="170" x:Name="CustomNotification" Click="CustomNotification_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

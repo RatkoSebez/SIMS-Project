@@ -1,0 +1,164 @@
+[
+  {
+    "Renovation": [],
+    "RoomId": 1955,
+    "NumberOfFloors": 32,
+    "RoomNumber": 21,
+    "Capacity": 525,
+    "OperationRoomType": 0,
+    "RoomType": 1,
+    "Occupied": false,
+    "Scheduled": [
+      "2021-05-19T05:00:00Z",
+      "2021-05-19T10:00:00Z",
+      "2021-05-20T09:00:00Z",
+      "2021-05-20T05:00:00Z",
+      "2021-05-20T08:00:00Z",
+      "2021-05-26T06:30:00Z",
+      "2021-05-22T08:00:00Z",
+      "2021-05-21T05:00:00Z",
+      "2021-05-29T06:30:00Z",
+      "2021-07-10T10:00:00Z",
+      "2021-05-29T12:30:00Z",
+      "2021-05-21T01:00:00Z",
+      "2021-10-08T08:00:00Z",
+      "2021-12-01T08:00:00Z",
+      "2021-05-21T01:30:00Z",
+      "2021-05-21T01:30:00Z",
+      "2021-05-21T01:30:00Z",
+      "2021-05-21T01:30:00Z",
+      "2021-05-21T01:30:00Z",
+      "2021-05-21T02:00:00Z",
+      "2021-05-21T02:00:00Z",
+      "2021-05-21T02:00:00Z",
+      "2021-05-26T05:00:00Z",
+      "2021-05-24T05:00:00Z",
+      "2022-01-01T09:00:00Z",
+      "2022-05-01T09:00:00Z",
+      "2021-05-27T10:00:00Z",
+      "2021-05-27T05:30:00Z",
+      "2021-05-29T05:00:00Z",
+      "2021-05-28T11:30:00Z",
+      "2021-05-30T07:00:00Z",
+      "2021-06-03T05:00:00Z",
+      "2021-05-31T08:00:00Z",
+      "2021-06-03T12:00:00",
+      "2021-06-02T09:00:00",
+      "2021-06-01T07:30:00",
+      "2021-06-01T08:00:00",
+      "2021-06-01T08:30:00",
+      "2021-06-03T07:00:00",
+      "2021-06-04T09:00:00",
+      "2021-06-16T07:00:00",
+      "2021-06-09T07:00:00",
+      "2021-06-09T07:30:00",
+      "2021-06-11T09:30:00"
+    ],
+    "Resource": [
+      {
+        "idItem": 675784,
+        "name": "Probiotik",
+        "quantity": 1,
+        "manufacturer": "Galenika",
+        "isStatic": false,
+        "roomId": 1955
+      },
+      {
+        "idItem": 950186,
+        "name": "Sto",
+        "quantity": 3,
+        "manufacturer": "3132",
+        "isStatic": true,
+        "roomId": 1955
+      },
+      {
+        "idItem": 96,
+        "name": "Stolice",
+        "quantity": 1,
+        "manufacturer": "3132",
+        "isStatic": true,
+        "roomId": 1955
+      }
+    ]
+  },
+  {
+    "Renovation": [],
+    "RoomId": 33,
+    "NumberOfFloors": 3,
+    "RoomNumber": 13,
+    "Capacity": 3,
+    "OperationRoomType": 0,
+    "RoomType": 0,
+    "Occupied": false,
+    "Scheduled": [
+      "2021-12-31T11:00:00Z",
+      "2021-05-26T04:30:00Z",
+      "2021-05-28T05:30:00Z",
+      "2021-06-05T16:00:00"
+    ],
+    "Resource": []
+  },
+  {
+    "Renovation": [],
+    "RoomId": 1905,
+    "NumberOfFloors": 3,
+    "RoomNumber": 13,
+    "Capacity": 12,
+    "OperationRoomType": 0,
+    "RoomType": 1,
+    "Occupied": false,
+    "Scheduled": [
+      "2021-05-21T05:00:00Z"
+    ],
+    "Resource": [
+      {
+        "idItem": 950186,
+        "name": "Sto",
+        "quantity": 3,
+        "manufacturer": "3132",
+        "isStatic": true,
+        "roomId": 1905
+      },
+      {
+        "idItem": 675784,
+        "name": "Probiotik",
+        "quantity": 3,
+        "manufacturer": "Galenika",
+        "isStatic": false,
+        "roomId": 1905
+      },
+      {
+        "idItem": 96,
+        "name": "Stolice",
+        "quantity": 1,
+        "manufacturer": "3132",
+        "isStatic": true,
+        "roomId": 1905
+      }
+    ]
+  },
+  {
+    "Renovation": [],
+    "RoomId": 1111,
+    "NumberOfFloors": 0,
+    "RoomNumber": 0,
+    "Capacity": 0,
+    "OperationRoomType": 0,
+    "RoomType": 3,
+    "Occupied": false,
+    "Scheduled": [],
+    "Resource": []
+  },
+  {
+    "Renovation": [],
+    "RoomId": 3232,
+    "NumberOfFloors": 0,
+    "RoomNumber": 0,
+    "Capacity": 323,
+    "OperationRoomType": 0,
+    "RoomType": 1,
+    "Occupied": false,
+    "Scheduled": [],
+    "Resource": []
+  }
+]

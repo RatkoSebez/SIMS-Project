@@ -1,0 +1,14 @@
+﻿<Window x:Class="HospitalApplication.Windows.ManagerWindows.Renovations.ChooseRenovation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.ManagerWindows.Renovations"
+        mc:Ignorable="d"
+        Title="ChooseRenovation" Height="225" Width="800">
+    <Grid Height="225" VerticalAlignment="Top" HorizontalAlignment="Left" Width="818">
+        <Button Content="One room" Height="40" Width="120"  Margin="140,93,558,92" Click="One_Clicked"  />
+        <Button Content="Two rooms to one" Height="40" Width="120"  Margin="555,93,143,92" Click="TwoToOne_Clicked"  />
+        <Button Content="One to two rooms" Height="40" Width="120"  Margin="349,93,349,92" Click="OneToTwo_Clicked"  />
+    </Grid>
+</Window>

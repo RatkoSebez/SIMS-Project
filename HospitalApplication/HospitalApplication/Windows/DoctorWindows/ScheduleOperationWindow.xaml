@@ -1,0 +1,34 @@
+﻿<Window x:Class="HospitalApplication.Windows.Doctor1.ScheduleOperationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Doctor1"
+        mc:Ignorable="d"
+        Title="ScheduleOperationWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Label Content="Operation start" HorizontalAlignment="Left" Height="38" Margin="46,28,0,0" VerticalAlignment="Top" Width="177"/>
+            <Label Content="Operation end" HorizontalAlignment="Left" Height="24" Margin="46,71,0,0" VerticalAlignment="Top" Width="129"/>
+            <Label Content="Urgent operation" HorizontalAlignment="Left" Height="29" Margin="46,114,0,0" VerticalAlignment="Top" Width="129"/>
+            <Label Content="Doctor" HorizontalAlignment="Left" Height="34" Margin="46,165,0,0" VerticalAlignment="Top" Width="104"/>
+            <Label Content="Patient" HorizontalAlignment="Left" Height="41" Margin="46,217,0,0" VerticalAlignment="Top" Width="97"/>
+            <Label Content="Operating room type" HorizontalAlignment="Left" Height="34" Margin="46,276,0,0" VerticalAlignment="Top" Width="129"/>
+            <Label Content="Specialization" HorizontalAlignment="Left" Height="43" Margin="46,315,0,0" VerticalAlignment="Top" Width="129"/>
+            <CheckBox Content="CheckBox" Margin="476,114,110,291"/>
+            <TextBox Text="Enter name and last name" TextWrapping="Wrap" Margin="476,156,110,252"/>
+            <TextBox Text="Enter name and last name" TextWrapping="Wrap" Margin="476,211,110,196"/>
+            <ComboBox Margin="476,263,110,141"/>
+            <CheckBox Content="CheckBox" Margin="476,315,110,98"/>
+            <Button Content="Confirm" Margin="98,385,524,22"/>
+            <Button Content="Give up" Margin="476,385,110,22"/>
+            <DatePicker Margin="476,28,110,368"/>
+            <DatePicker Margin="476,74,110,325"/>
+            <Label Content="Operation Id" HorizontalAlignment="Left" Height="23" Margin="46,347,0,0" VerticalAlignment="Top" Width="141"/>
+            <TextBox Text="TextBox" TextWrapping="Wrap" Margin="476,344,110,64"/>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

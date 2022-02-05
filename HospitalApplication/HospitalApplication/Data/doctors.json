@@ -1,0 +1,89 @@
+[
+  {
+    "DoctorType": 0,
+    "Scheduled": [
+      "2021-06-09T07:00:00",
+      "2021-06-09T07:30:00"
+    ],
+    "SexType": 0,
+    "Jmbg": "412124",
+    "Name": "Nebojsa",
+    "LastName": "Stefanovic",
+    "Id": "0",
+    "DateOfBirth": "2021-05-04T22:00:00Z",
+    "PhoneNumber": "421421",
+    "Email": "afsfas",
+    "PlaceOfResidance": "fasafs",
+    "TypeOfPerson": 0,
+    "Username": "drNebojsaStefanovic",
+    "Password": "123"
+  },
+  {
+    "DoctorType": 0,
+    "Scheduled": [],
+    "SexType": 0,
+    "Jmbg": "412124",
+    "Name": "aaaa",
+    "LastName": "aaaa",
+    "Id": "0",
+    "DateOfBirth": "2021-05-04T22:00:00Z",
+    "PhoneNumber": "421421",
+    "Email": "afsfas",
+    "PlaceOfResidance": "fasafs",
+    "TypeOfPerson": 0,
+    "Username": "drNestorovic",
+    "Password": "123"
+  },
+  {
+    "DoctorType": 0,
+    "Scheduled": [
+      "2021-06-16T07:00:00"
+    ],
+    "SexType": 0,
+    "Jmbg": "412124",
+    "Name": "aaaa",
+    "LastName": "aaaa",
+    "Id": "0",
+    "DateOfBirth": "2021-05-04T22:00:00Z",
+    "PhoneNumber": "421421",
+    "Email": "afsfas",
+    "PlaceOfResidance": "fasafs",
+    "TypeOfPerson": 0,
+    "Username": "drDarijaKisic",
+    "Password": "123"
+  },
+  {
+    "DoctorType": 0,
+    "Scheduled": [
+      "2021-06-11T09:30:00"
+    ],
+    "SexType": 0,
+    "Jmbg": "412124",
+    "Name": "aaaa",
+    "LastName": "aaaa",
+    "Id": "0",
+    "DateOfBirth": "2021-05-04T22:00:00Z",
+    "PhoneNumber": "421421",
+    "Email": "afsfas",
+    "PlaceOfResidance": "fasafs",
+    "TypeOfPerson": 0,
+    "Username": "drPredragKon",
+    "Password": "123"
+  },
+  {
+    "DoctorType": 0,
+    "Scheduled": [],
+    "SexType": 0,
+    "Jmbg": "412124",
+    "Name": "aaaa",
+    "LastName": "aaaa",
+    "Id": "0",
+    "DateOfBirth": "2021-05-04T22:00:00Z",
+    "PhoneNumber": "421421",
+    "Email": "afsfas",
+    "PlaceOfResidance": "fasafs",
+    "TypeOfPerson": 0,
+    "Username": "drSinisa",
+    "Password": "123"
+  }
+]

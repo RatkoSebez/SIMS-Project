@@ -1,0 +1,28 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Medicines.main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Medicines"
+        mc:Ignorable="d"
+        Title="main" Height="530" Width="765">
+    <Grid>
+        <ListView Margin="51,10,0,0" Name="lvDataBinding" Height="383" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Manufacturer" Width="248" DisplayMemberBinding="{Binding Manufacturer}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add"   HorizontalAlignment="Left" Margin="50,419,0,0" VerticalAlignment="Top" Width="118" Height="45" Click="Add_Clicked"  />
+        <Button Content="Delete "  HorizontalAlignment="Left" Margin="180,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Delete_Clicked"  />
+        <Button Content="Complaint "  HorizontalAlignment="Left" Margin="570,50,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Problems_Clicked"  />
+        <Button Content="Info "  HorizontalAlignment="Left" Margin="570,105,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Info_Clicked"  />
+        <Button Content="Edit"  HorizontalAlignment="Left" Margin="310,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Edit_Clicked"  />
+        <Button Content="Print drugs "  HorizontalAlignment="Left" Margin="570,160,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Print_Clicked"  />
+
+        <Button Content="Refresh List" HorizontalAlignment="Left" Margin="570,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Refresh_Clicked"  />
+    </Grid>
+</Window>

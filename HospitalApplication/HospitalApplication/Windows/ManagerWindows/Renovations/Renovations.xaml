@@ -1,0 +1,26 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Renovationn.Renovations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Renovationn"
+        mc:Ignorable="d"
+        Title="Renovations" Height="530" Width="770">
+    <Grid>
+        <ListView Margin="110,10,0,0" Name="lvDataBinding" Height="383" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Room id" Width="120" DisplayMemberBinding="{Binding RoomId}" />
+                    <GridViewColumn Header="Start day" Width="210" DisplayMemberBinding="{Binding StartDay}" />
+                    <GridViewColumn Header="End day" Width="200" DisplayMemberBinding="{Binding EndDay}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add "   HorizontalAlignment="Left" Margin="110,419,0,0" VerticalAlignment="Top" Width="118" Height="45" Click="Add_Clicked"  />
+        <Button Content="Delete "  HorizontalAlignment="Left" Margin="250,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Delete_Clicked" />
+        <Button Content="Edit "  HorizontalAlignment="Left" Margin="390,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Edit_Clicked"  />
+
+        <Button Content="Refresh List" HorizontalAlignment="Left" Margin="530,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Refresh_Clicked"  />
+    </Grid>
+</Window>

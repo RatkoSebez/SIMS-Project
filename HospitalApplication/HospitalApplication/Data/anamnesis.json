@@ -1,0 +1,32 @@
+[
+  {
+    "GeneralInformation": "a",
+    "MainProblems": "b",
+    "CurrentDisease": "c",
+    "GeneralProblems": "d",
+    "PatientsId": "MarkoMarkovic",
+    "ExaminationId": "100001",
+    "Date": "2021-05-20T10:52:41.2603701Z",
+    "PatientsComment": "belskaaa"
+  },
+  {
+    "GeneralInformation": "a",
+    "MainProblems": "b",
+    "CurrentDisease": "c",
+    "GeneralProblems": "d",
+    "PatientsId": "MarkoMarkovic",
+    "ExaminationId": "100003",
+    "Date": "2021-05-20T10:52:44.1218781Z",
+    "PatientsComment": "asdf"
+  },
+  {
+    "GeneralInformation": "a",
+    "MainProblems": "b",
+    "CurrentDisease": "c",
+    "GeneralProblems": "d",
+    "PatientsId": "JovanJovanovic",
+    "ExaminationId": "100004",
+    "Date": "2021-05-20T10:52:46.9824067Z",
+    "PatientsComment": ""
+  }
+]

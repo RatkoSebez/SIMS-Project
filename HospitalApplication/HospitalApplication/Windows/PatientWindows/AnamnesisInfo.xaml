@@ -1,0 +1,80 @@
+﻿<Window x:Class="HospitalApplication.Windows.AnamnesisInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows"
+        mc:Ignorable="d"
+        Title="AnamnesisInfo" Height="480" Width="700"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Style="{StaticResource WindowStyle}">
+    <Grid>
+        <StackPanel>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Patient:" Grid.Column="0"/>
+                <TextBlock Name="PatientId" Grid.Column="1"/>
+            </Grid>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Appointment ID:" Grid.Column="0"/>
+                <TextBlock Name="ExaminationId" Grid.Column="1"/>
+            </Grid>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Date:" Grid.Column="0"/>
+                <TextBlock Name="Date" Grid.Column="1"/>
+            </Grid>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="General information:" Grid.Column="0"/>
+                <TextBox VerticalScrollBarVisibility="Auto" Grid.Column="1" IsEnabled="False" TextWrapping="Wrap" x:Name="GeneralInformation" VerticalAlignment="Center" MinHeight="60"/>
+            </Grid>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Main problems:" Grid.Column="0"/>
+                <TextBox VerticalScrollBarVisibility="Auto" Grid.Column="1" IsEnabled="False" TextWrapping="Wrap" x:Name="MainProblems" VerticalAlignment="Center" MinHeight="60"/>
+            </Grid>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Current disease:" Grid.Column="0"/>
+                <TextBox VerticalScrollBarVisibility="Auto" Grid.Column="1" IsEnabled="False" TextWrapping="Wrap" x:Name="CurrentDisease" VerticalAlignment="Center" MinHeight="60"/>
+            </Grid>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="General problems:" Grid.Column="0"/>
+                <TextBox VerticalScrollBarVisibility="Auto" Grid.Column="1" IsEnabled="False" TextWrapping="Wrap" x:Name="GeneralProblems" VerticalAlignment="Center" MinHeight="60"/>
+            </Grid>
+            <Grid Margin="50 10 50 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Patients Comment:" Grid.Column="0"/>
+                <TextBox VerticalScrollBarVisibility="Auto" Grid.Column="1" IsEnabled="False" TextWrapping="Wrap" x:Name="PatientsComment" VerticalAlignment="Center" MinHeight="60"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

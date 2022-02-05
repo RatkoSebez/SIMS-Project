@@ -1,0 +1,13 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Resources.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Resources"
+        mc:Ignorable="d"
+        Title="Menu" Height="225" Width="800">
+    <Grid Height="225" VerticalAlignment="Top" HorizontalAlignment="Left" Width="818">
+        <Button Content="Search resource" Height="40" Width="120"  Margin="200,85,480,84" Click="Search_Clicked" />
+        <Button Content="Room resource" Height="40" Width="120"  Margin="480,85,200,84" Click="Room_Clicked" />
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Resources.SearchedResource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Resources"
+        mc:Ignorable="d"
+        Title="SearchedResource" Height="510" Width="770">
+    <Grid>
+        <ListView Margin="110,10,0,0" Name="lvDataBinding" Height="383" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Room Id" Width="120" DisplayMemberBinding="{Binding roomId}" />
+                    <GridViewColumn Header="Resource name" Width="120" DisplayMemberBinding="{Binding name}" />
+                    <GridViewColumn Header="Num" Width="30" DisplayMemberBinding="{Binding quantity}" />
+                    <GridViewColumn Header="Manufacturer" Width="120" DisplayMemberBinding="{Binding manufacturer}" />
+                    <GridViewColumn Header="Item id" Width="120" DisplayMemberBinding="{Binding idItem}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,106 @@
+﻿<Window x:Class="HospitalApplication.Windows.PatientWindows.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:HospitalApplication.Properties"
+        xmlns:p="clr-namespace:HospitalApplication.Properties"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.PatientWindows"
+        mc:Ignorable="d"
+        Title="Home"
+        Height="600"
+        Width="900"
+        WindowStartupLocation="CenterScreen"
+        Closed="Window_Closed"
+        Style="{StaticResource WindowStyle}">
+    <Grid>
+        <!--ne koristim ga, samo je ovde kao primer kako namestati stil lokalno na stranici-->
+        <!--
+        <Grid.Style>
+            <Style>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Dark">
+                        <Setter Property="Grid.Background" Value="#121212"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Style>
+        -->
+        <Grid x:Name="panelHeader" MouseDown="panelHeader_MouseDown" VerticalAlignment="Top" Height="50" Background="#014546">
+            <Grid.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                            <Setter Property="Grid.Background" Value="#014546"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            <TextBlock Margin="57 0 0 0" Text="{x:Static p:Resources.HomeTitle}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="white" FontSize="38"/>
+        </Grid>
+        <Grid x:Name="sidePanel" HorizontalAlignment="Left" Width="160" Background="#014546" Panel.ZIndex="2">
+            <StackPanel>
+                <Grid Height="50">
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Height="50" Width="57" BorderBrush="Transparent" x:Name="HamburgerButton" Click="HamburgerButton_Click">
+                        <Image Source="Images/hamburger.png"/>
+                    </Button>
+                </Grid>
+                <ListView Margin="0 40 0 0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="Transparent" Background="Transparent" FontSize="15" Foreground="white" HorizontalAlignment="Left">
+                    <ListViewItem Height="45" Margin="0 0 0 20" x:Name="MenuHome" Selected="MenuHome_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/home.png" Margin="0 0 10 0"/>
+                            <TextBlock VerticalAlignment="Center">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=Language}" Value="Serbian">
+                                                <Setter Property="Text" Value="{x:Static p:Resources.HomeHome}"/>
+                                                <!--<Setter Property="Foreground" Value="Yellow" />-->
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=Language}" Value="English">
+                                                <Setter Property="Text" Value="{x:Static p:Resources.HomeHome}"/>
+                                                <!--<Setter Property="Foreground" Value="Green" />-->
+                                            </DataTrigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <!--<Setter Property="Foreground" Value="Red" />-->
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Margin="0 0 0 20" Name="MenuNotification" Selected="MenuNotification_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/notification.png" Margin="0 0 10 0"/>
+                            <TextBlock Text="{x:Static p:Resources.HomeNotifications}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Margin="0 0 0 20" Name="MenuSurvey" Selected="MenuSurvey_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/survey.jpg" Margin="0 0 10 0"/>
+                            <TextBlock Text="{x:Static p:Resources.HomeSurveys}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Margin="0 0 0 20" Name="MenuAnamnesis" Selected="MenuAnamnesis_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/anamnesis.png" Margin="0 0 10 0"/>
+                            <TextBlock Text="{x:Static p:Resources.HomeAnamnesis}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Margin="0 0 0 20" Name="MenuSettings" Selected="MenuSettings_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/settings.png" Margin="0 0 10 0"/>
+                            <TextBlock Text="{x:Static p:Resources.HomeSettings}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+
+        <Frame x:Name="Main" Margin="57 50 0 0" NavigationUIVisibility="Hidden"/>
+        
+    </Grid>
+</Window>

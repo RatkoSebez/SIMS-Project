@@ -1,0 +1,211 @@
+﻿<Window x:Class="HospitalApplication.Windows.PatientWindows.DoctorSurvey"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.PatientWindows"
+        xmlns:properties="clr-namespace:HospitalApplication.Properties"
+        mc:Ignorable="d"
+        Title="DoctorSurvey" Height="750" Width="500"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource WindowStyle}">
+    <Grid Margin="10">
+        <Grid.Resources>
+            <Style TargetType="Rectangle">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Light">
+                        <Setter Property="Fill" Value="#014546"/>
+                        <Setter Property="Height" Value="4"/>
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="Margin" Value="0 0 0 10"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Source={x:Static properties:Settings.Default}, Path=ColorMode}" Value="Dark">
+                        <Setter Property="Fill" Value="Black"/>
+                        <Setter Property="Height" Value="4"/>
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="Margin" Value="0 0 0 10"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <Label Content="Doctor Survey" HorizontalAlignment="Center" FontSize="30" Margin="0 10 0 10"/>
+                <Grid Margin="0 20 0 20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Pick your doctor:" Grid.Column="0"/>
+                    <ComboBox Name="ComboDoctors" Grid.Column="1" SelectedIndex="0"/>
+                </Grid>
+                
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question1" Text=""/>
+                <Grid Margin="0 20 0 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group1" x:Name="RadioButton1" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group1" x:Name="RadioButton2" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group1" x:Name="RadioButton3" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group1" x:Name="RadioButton4" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group1" x:Name="RadioButton5" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question2" Text=""/>
+                <Grid Margin="0 20 0 20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group2" x:Name="RadioButton6" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group2" x:Name="RadioButton7" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group2" x:Name="RadioButton8" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group2" x:Name="RadioButton9" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group2" x:Name="RadioButton10" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question3" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group3" x:Name="RadioButton11" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group3" x:Name="RadioButton12" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group3" x:Name="RadioButton13" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group3" x:Name="RadioButton14" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group3" x:Name="RadioButton15" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question4" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group4" x:Name="RadioButton16" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group4" x:Name="RadioButton17" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group4" x:Name="RadioButton18" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group4" x:Name="RadioButton19" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group4" x:Name="RadioButton20" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question5" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group5" x:Name="RadioButton21" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group5" x:Name="RadioButton22" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group5" x:Name="RadioButton23" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group5" x:Name="RadioButton24" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group5" x:Name="RadioButton25" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question6" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group6" x:Name="RadioButton26" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group6" x:Name="RadioButton27" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group6" x:Name="RadioButton28" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group6" x:Name="RadioButton29" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group6" x:Name="RadioButton30" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question7" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group7" x:Name="RadioButton31" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group7" x:Name="RadioButton32" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group7" x:Name="RadioButton33" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group7" x:Name="RadioButton34" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group7" x:Name="RadioButton35" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question8" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group8" x:Name="RadioButton36" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group8" x:Name="RadioButton37" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group8" x:Name="RadioButton38" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group8" x:Name="RadioButton39" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group8" x:Name="RadioButton40" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question9" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group9" x:Name="RadioButton41" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group9" x:Name="RadioButton42" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group9" x:Name="RadioButton43" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group9" x:Name="RadioButton44" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group9" x:Name="RadioButton45" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow" Name="Question10" Text=""/>
+                <Grid Margin="0 20 0 20" x:Name="Grid10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="Group10" x:Name="RadioButton46" Grid.Column="0" Content="1" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group10" x:Name="RadioButton47" Grid.Column="1" Content="2" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group10" x:Name="RadioButton48" Grid.Column="2" Content="3" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group10" x:Name="RadioButton49" Grid.Column="3" Content="4" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                    <RadioButton GroupName="Group10" x:Name="RadioButton50" Grid.Column="4" Content="5" HorizontalAlignment="Center" Checked="RadioButtonChecked"/>
+                </Grid>
+                <Rectangle/>
+                <TextBlock TextWrapping="WrapWithOverflow"  Name="Question11" Text="" Margin="0 0 0 20"/>
+                <TextBox TextWrapping="Wrap" AcceptsReturn="True" Name="WrittenAnswer" Height="80" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                <TextBlock Text="" Foreground="Red" HorizontalAlignment="Right" Name="Error"/>
+                <Button Content="Submit" x:Name="ButtonOk" Click="ButtonOk_Click" Width="80" Margin="0 20"></Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

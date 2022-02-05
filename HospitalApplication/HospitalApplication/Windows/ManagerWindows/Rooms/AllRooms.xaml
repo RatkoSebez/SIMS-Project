@@ -1,0 +1,31 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Prostorije.AllRooms"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Prostorije"
+             mc:Ignorable="d" 
+             Title="AllRooms" Height="530" Width="770">
+    <Grid>
+        <ListView Margin="11,10,0,0" Name="lvDataBinding" Height="383" VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Room type" Width="120" DisplayMemberBinding="{Binding RoomType}" />
+                    <GridViewColumn Header="Capacity" Width="120" DisplayMemberBinding="{Binding Capacity}" />
+                    <GridViewColumn Header="Number Of Floors" Width="120" DisplayMemberBinding="{Binding NumberOfFloors}" />
+                    <GridViewColumn Header="Occupied" Width="120" DisplayMemberBinding="{Binding Occupied}" />
+                    <GridViewColumn Header="Room Id" Width="120" DisplayMemberBinding="{Binding RoomId}" />
+                    <GridViewColumn Header="Room number" Width="120" DisplayMemberBinding="{Binding RoomNumber}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add new room"   HorizontalAlignment="Left" Margin="50,419,0,0" VerticalAlignment="Top" Width="118" Height="45" Click="AddRoom_Clicked"/>
+        <Button Content="Delete "  HorizontalAlignment="Left" Margin="180,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Deleted_Clicked"/>
+        <Button Content="Search "  HorizontalAlignment="Left" Margin="440,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Search_Clicked"/>
+        <Button Content="Edit"  HorizontalAlignment="Left" Margin="310,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Edit_Clicked"/>
+
+        <Button Content="Refresh List" HorizontalAlignment="Left" Margin="570,419,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="Refresh_Clicked"/>
+    </Grid>
+</Window>

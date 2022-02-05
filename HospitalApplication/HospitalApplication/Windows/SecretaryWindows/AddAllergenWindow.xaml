@@ -1,0 +1,24 @@
+﻿<Window x:Class="HospitalApplication.Windows.Secretary.AddAllergenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Secretary"
+        mc:Ignorable="d"
+        Title="AddAllergenWindow" Height="390" Width="531">
+    <Grid Margin="0,0,10,12">
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="43,54,0,0" Name="textBlockTypeAllergen" Text="Type of allergen:" VerticalAlignment="Top" Width="110" RenderTransformOrigin="1.054,0.562" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="43,104,0,0" Name="textBlockSpecName" Text="Specific name:" VerticalAlignment="Top" Width="110" RenderTransformOrigin="1.054,0.562" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="186,105,0,0" Name="textBoxTypeAllergen" VerticalAlignment="Top" Width="222" />
+        <ComboBox Margin="186,54,0,0" Name="ComboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="222" Height="23">
+
+        </ComboBox>
+
+
+        <Button Content="Ok" Click="Button_Click" HorizontalAlignment="Left" Margin="154,231,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <Button Content="Cancel" Click="Button_Click_1" HorizontalAlignment="Left" Margin="297,231,0,0" VerticalAlignment="Top" Height="28" Width="84" RenderTransformOrigin="0.45,1.475"/>
+
+    </Grid>
+</Window>

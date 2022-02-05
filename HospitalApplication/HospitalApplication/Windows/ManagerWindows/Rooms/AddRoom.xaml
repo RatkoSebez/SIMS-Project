@@ -1,0 +1,43 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Rooms.AddRoom"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Rooms"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:mocal="clr-namespace:Model"
+             mc:Ignorable="d" 
+             Title="AddRoom" Height="450" Width="550">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="mocal:RoomType"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="252*" />
+            <!--   <RowDefinition Height="12*" />-->
+        </Grid.RowDefinitions>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockCapacity" Text="Capacity:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" Name="textBlockNumberOfFloors" Text="Number Of Floors:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" Name="textBlockOccupied" Text="Occupied:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,110,0,0" Name="textBlockRoomId" Text="Room Id:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,140,0,0" Name="textBlockRoomNumber" Text="Room number:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,170,0,0" Name="textBlockRoomType" Text="Room type:" VerticalAlignment="Top" Width="110" />
+
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxCapacity" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="textBoxNumberOfFloors" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,110,0,0" Name="textBoxRoomId" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,140,0,0" Name="textBoxRoomNumber" VerticalAlignment="Top" Width="222" />
+        <CheckBox Height="23" HorizontalAlignment="Left" Margin="390,80,0,0" Name="checkBoxOccupied" VerticalAlignment="Top" Width="222"/>
+
+        <ComboBox ItemsSource="{Binding Source={StaticResource dataFromEnum}}" Height="23" HorizontalAlignment="Left" Margin="183,170,0,66" Name="comboBoxRoomType" VerticalAlignment="Top" Width="222"/>
+        
+        <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="250,210,0,0" Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Clicked"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,133 @@
+﻿<Window x:Class="HospitalApplication.Windows.Secretary.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Secretary"
+        mc:Ignorable="d"
+        Title="HomeWindow" Height="574" Width="940">
+
+    <Window.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Height="550" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1">
+            <ListView Margin="8,10,12,78" Name="lvUsers" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="200" Header="Publication Date" DisplayMemberBinding="{Binding PublicationDate}" />
+                        <GridViewColumn Width="120" Header="ID" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Width="200" Header="Type News" DisplayMemberBinding="{Binding TypeNews}" />
+                        <GridViewColumn Width="180" Header="Title" DisplayMemberBinding="{Binding Title}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+            <Button Background="#e1e1e1" BorderBrush="#00cc66" Content="Create News"  Click="CreateNews_Click"  HorizontalAlignment="Left" Margin="8,477,0,0" VerticalAlignment="Top" Width="165" Height="55"/>
+            <Button Background="#e1e1e1" BorderBrush="#00cc66" Content="View News"  Click="ViewButton_Click"  HorizontalAlignment="Left" Margin="188,477,0,0" VerticalAlignment="Top" Width="165" Height="55" RenderTransformOrigin="0.737,-1.969"/>
+            <Button Background="#e1e1e1" BorderBrush="#00cc66" Content="Edit News"  Click="EditButton_Click" HorizontalAlignment="Left" Margin="368,477,0,0" VerticalAlignment="Top" Width="166" Height="55"/>
+            <Button Background="#e1e1e1" BorderBrush="#00cc66" Content="Delete News" Click="DeleteButton_Click" HorizontalAlignment="Left" Margin="547,477,0,0" VerticalAlignment="Top" Width="165" Height="55"/>
+
+        </Grid>
+
+
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightGray" Offset="1"/>
+                    <GradientStop Color="#FFE6E6E6"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+            </Grid.Effect>
+
+            <Grid Background="#f2f2f2">
+
+                <TextBlock FontWeight="Bold" Text="H" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="#00ff00" FontSize="80"/>
+            </Grid>
+
+            <StackPanel Grid.Row="1">
+                <Button Click="AllPatients_Click"  Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="AccountAdd" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Patients" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+                <Button Click="MakeAppointment_Click" Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Table" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Make an appointment" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+                <Button Click="Doctors_Click" Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Doctor" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Doctors" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+                <Button Click="EmergencyButton_Click" Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Bullhorn" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Emergency" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+                <Button Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="FaceMale" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Records of practice" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+                <Button Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Globe" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Language" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+
+                <Button Click="RateApp_Click" Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="RateReview" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Rate App" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+
+                <Button Click="SignOut_Click" Margin="10" Background="#FFF" BorderBrush="#00cc66">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="SignOut" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Sign out" FontFamily="Champagne &amp; Limousines"/>
+                    </Grid>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+
+
+</Window>

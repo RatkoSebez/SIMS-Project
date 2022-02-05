@@ -1,0 +1,53 @@
+﻿<Page x:Class="HospitalApplication.Windows.ManagerWindows.Views.AllRoomsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalApplication.Windows.ManagerWindows.Views"
+      mc:Ignorable="d" d:DesignWidth="770"
+      Title="AllRoomsPage" Height="552">
+    
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="All rooms" FontSize="30" HorizontalAlignment="Left" Margin="50,0,0,0" VerticalAlignment="Bottom"/>
+                    <Image Source="../Images/search.png" Width="15" Height="15" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="502,0,10,0"/>
+                    <TextBox x:Name="filterRoom" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,100,0"/>
+                </StackPanel>
+                <ListView Margin="11,10,0,0" Name="lvDataBinding" Height="200" VerticalAlignment="Top" HorizontalAlignment="Center" Width="Auto">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Room type" Width="120" DisplayMemberBinding="{Binding RoomType}" />
+                            <GridViewColumn Header="Capacity" Width="120" DisplayMemberBinding="{Binding Capacity}" />
+                            <GridViewColumn Header="Number Of Floors" Width="120" DisplayMemberBinding="{Binding NumberOfFloors}" />
+                            <GridViewColumn Header="Occupied" Width="120" DisplayMemberBinding="{Binding Occupied}" />
+                            <GridViewColumn Header="Room Id" Width="120" DisplayMemberBinding="{Binding RoomId}" />
+                            <GridViewColumn Header="Room number" Width="120" DisplayMemberBinding="{Binding RoomNumber}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <DockPanel HorizontalAlignment="Center">
+                    <Button Content="Add new room"   HorizontalAlignment="Left" Margin="50,20,10,0" VerticalAlignment="Top" Width="100" Height="35" Click="AddRoom_Clicked"/>
+                    <Button Content="Delete "  HorizontalAlignment="Left" Margin="0,20,10,0" VerticalAlignment="Top" Width="120" Height="35" Click="Deleted_Clicked"/>
+                    <Button Content="Search "  HorizontalAlignment="Left" Margin="0,20,10,0" VerticalAlignment="Top" Width="120" Height="35" Click="Search_Clicked"/>
+                    <Button Content="Edit"  HorizontalAlignment="Left" Margin="0,20,10,0" VerticalAlignment="Top" Width="120" Height="35" Click="Edit_Clicked"/>
+                    <Button Content="Refresh List" HorizontalAlignment="Left" Margin="0,20,10,0" VerticalAlignment="Top" Width="120" Height="35" Click="Refresh_Clicked"/>
+                </DockPanel>
+                <TextBlock Text="Renovations" FontSize="30" HorizontalAlignment="Left" Margin="50,105,0,10"/>
+                <DockPanel>
+                    <Viewbox Width="300" HorizontalAlignment="Center" Margin="100,0,0,200">
+                        <Calendar/>
+                    </Viewbox>
+                    <StackPanel>
+                        <ComboBox HorizontalAlignment="Right" Width="120" Height="35" VerticalAlignment="Top" Margin="0,5,50,0"/>
+                        <TextBlock Text="Duration in days: " FontSize="20" HorizontalAlignment="Right" Margin="0,20,50,0"/>
+                        <TextBox x:Name="DurationInDays" Width="120" Height="35" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" Margin="0,10,50,0"/>
+                        <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Right" Width="120" Height="35" Margin="0,110,50,0"/>
+                    </StackPanel>
+                </DockPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+    
+</Page>

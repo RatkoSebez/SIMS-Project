@@ -1,0 +1,27 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Medicines.InfoDrug"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Medicines"
+        mc:Ignorable="d"
+        Title="InfoDrug" Height="280" Width="480">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="252*" />
+        </Grid.RowDefinitions>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockCapacity" Text="Name:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" Name="textBlockOccupied" Text="Replacement:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" Name="textBlockRoomId" Text="Manufacturer:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,110,0,0" Name="textBlockIngredients" Text="Ingredients:" VerticalAlignment="Top" Width="110" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxName" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="textBoxQuantity" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="70" HorizontalAlignment="Left" Margin="183,110,0,0" Name="textBoxMultiline" VerticalAlignment="Top" Width="222" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,80,0,0" Name="textBoxReplacement" VerticalAlignment="Top" Width="222"/>
+
+
+        <Button Content="Ok" Height="23" HorizontalAlignment="Left" Margin="200,200,0,0" Name="Submit" VerticalAlignment="Top" Width="70" Click="Ok_Clicked"  />
+
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="HospitalApplication.Windows.Secretary.DefineAllergenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Secretary"
+        mc:Ignorable="d"
+        Title="DefineAllergenWindow" Height="350" Width="490">
+    <Grid Margin="0,0,-30,5">
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="70,81,0,0" Name="textBlockTypeAllergen" Text="Type of allergen:" VerticalAlignment="Top" Width="110" RenderTransformOrigin="1.054,0.562" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="189,81,0,0" Name="textBoxTypeAllergen" VerticalAlignment="Top" Width="222" />
+
+        <Button Content="Ok" Click="Button_Click" HorizontalAlignment="Left" Margin="111,204,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <Button Content="Cancel" Click="Button_Click_1" HorizontalAlignment="Left" Margin="258,204,0,0" VerticalAlignment="Top" Height="28" Width="84" RenderTransformOrigin="0.45,1.475"/>
+
+
+
+    </Grid>
+</Window>

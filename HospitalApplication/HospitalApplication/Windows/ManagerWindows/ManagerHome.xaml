@@ -1,0 +1,50 @@
+﻿<Window x:Class="HospitalApplication.Windows.ManagerWindows.ManagerHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.ManagerWindows"
+        mc:Ignorable="d"
+        Title="Home" 
+        Height="600"
+        Width="900"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource WindowStyle}" ResizeMode="NoResize">
+    <Grid>
+        <Grid x:Name="topPanel" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="900">
+            <DockPanel Width="900">
+                <Grid Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto">
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Height="48" BorderBrush="Transparent" x:Name="HomeButton" Margin="10,0,0,5" Click="Home_Clicked">
+                        <Image Source="Images/home_icon.jpg"/>
+                    </Button>
+                </Grid>
+                <Grid Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="130,0,50,0" Width="Auto">
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Height="45" BorderBrush="Transparent" x:Name="RoomsButton" Foreground="Black" Margin="0,0,0,5" Click="Rooms_Clicked">
+                        <TextBlock Text="Rooms" FontSize="35"/>
+                    </Button>
+                </Grid>
+                <Grid Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,50,0" Width="Auto">
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Height="45" BorderBrush="Transparent" x:Name="ResourceButton" Foreground="Black" Margin="0,0,0,5" Click="Resource_Clicked">
+                        <TextBlock Text="Resources" FontSize="35"/>
+                    </Button>
+                </Grid>
+                <Grid Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto">
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Height="45" BorderBrush="Transparent" x:Name="MedicinesButton" Foreground="Black" Margin="0,0,0,5">
+                        <TextBlock Text="Medicines" FontSize="35"/>
+                    </Button>
+                </Grid>
+                <Grid Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto">
+                    <Button HorizontalAlignment="Right" VerticalAlignment="Stretch" Background="Transparent" Height="45" BorderBrush="Transparent" x:Name="LeaveButton" Click="LogOut_Clicked" Margin="0,0,10,5">
+                        <Image Source="Images/logout.png" />
+                    </Button>
+                </Grid>
+            </DockPanel>
+            <Separator VerticalAlignment="Bottom" Background="Black" >
+                <Separator.RenderTransform>
+                    <ScaleTransform ScaleY="5" />
+                </Separator.RenderTransform>
+            </Separator>
+        </Grid>
+        <Frame x:Name="Main" Margin="0,53,0,0"/>
+    </Grid>
+</Window>

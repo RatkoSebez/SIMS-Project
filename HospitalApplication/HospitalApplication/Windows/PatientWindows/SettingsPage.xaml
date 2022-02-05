@@ -1,0 +1,29 @@
+﻿<Page x:Class="HospitalApplication.Windows.PatientWindows.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:p="clr-namespace:HospitalApplication.Properties"
+      xmlns:local="clr-namespace:HospitalApplication.Windows.PatientWindows"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SettingsPage"
+      Style="{StaticResource PageStyle}">
+
+    <Grid Margin="10">
+        <StackPanel>
+            <!--<ComboBox Name="ComboTheme" SelectionChanged="ComboTheme_SelectionChanged" Width="200" Background="Black" Foreground="White" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}">-->
+            <ComboBox Name="ComboTheme" SelectionChanged="ComboTheme_SelectionChanged" Width="200">
+                <ComboBoxItem Content="{x:Static p:Resources.Light}"/>
+                <ComboBoxItem Content="{x:Static p:Resources.Dark}"/>
+                <ComboBoxItem Content="{x:Static p:Resources.NoTheme}"/>
+            </ComboBox>
+            <ComboBox Name="ComboLanguage" SelectionChanged="ComboLanguage_SelectionChanged" Width="200" Margin="0 10 0 0">
+                <ComboBoxItem Content="{x:Static p:Resources.SettingsEnglish}"/>
+                <ComboBoxItem Content="{x:Static p:Resources.SettingsSerbian}"/>
+            </ComboBox>
+            <Button Margin="0 20 10 0" Content="{x:Static p:Resources.RateApplication}" x:Name="RateApplication" Click="RateApplication_Click" Width="150"/>
+            <Button Margin="0 20 10 0" Content="{x:Static p:Resources.Logout}" x:Name="Logout" Click="Logout_Click" Width="150"/>
+        </StackPanel>
+    </Grid>
+</Page>

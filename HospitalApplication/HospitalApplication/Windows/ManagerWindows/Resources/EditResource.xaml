@@ -1,0 +1,29 @@
+﻿<Window x:Class="HospitalApplication.Windows.Manager.Resources.EditResource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Manager.Resources"
+        mc:Ignorable="d"
+        Title="EditResource" Height="250" Width="480">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="252*" />
+        </Grid.RowDefinitions>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockCapacity" Text="Name:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" Name="textBlockNumberOfFloors" Text="Quantity:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" Name="textBlockOccupied" Text="Is static:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,110,0,0" Name="textBlockRoomId" Text="Manufacturer:" VerticalAlignment="Top" Width="110" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxName" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="textBoxQuantity" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="183,110,0,0" Name="textBoxManufacturer" VerticalAlignment="Top" Width="222" />
+        <CheckBox Height="23" HorizontalAlignment="Left" Margin="390,80,0,0" Name="checkBoxIsStatic" VerticalAlignment="Top" Width="222"/>
+
+
+        <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="150,180,0,0" Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Clicked"  />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="250,180,0,0" Name="Cancel" VerticalAlignment="Top" Width="70" Click="Cancel_Clicked"  />
+
+
+    </Grid>
+</Window>

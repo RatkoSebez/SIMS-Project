@@ -1,0 +1,25 @@
+﻿<Window x:Class="HospitalApplication.Windows.Doctor1.DoctorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApplication.Windows.Doctor1"
+        mc:Ignorable="d"
+        Title="DoctorWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Button Content="Schedule examination" x:Name="btnSchedule" Margin="36,30,555,339" Click="btnSchedule_Click" FontSize="18" FontWeight="Bold" Background="#FF54FF21"/>
+            <Button Content="Cancel examination" x:Name="btnCancel" Margin="434,30,147,339" Click="btnCancel_Click" FontSize="18" FontWeight="Bold" Background="#FF49FF13"/>
+            <Button Content="Show examinations" x:Name="btnShow"  Margin="36,130,555,249" Click="btnShow_Click" FontSize="18" FontWeight="Bold" Background="#FF4DFF19"/>
+            <Button Content="Move examination" x:Name="btnMove" Margin="434,130,147,249" Click="btnMove_Click" FontSize="18" FontWeight="Bold" Background="#FF4DFF19"/>
+            <Button Content="Schedule operation" x:Name="btnScheduleO" Margin="36,217,555,149" Click="btnScheduleO_Click" FontSize="18" FontWeight="Bold" Background="#FF5FFD15"/>
+            <Button Content="Cancel operation" x:Name="btnCancelO" Margin="434,214,147,146" Click="btnCancelO_Click" FontSize="18" FontWeight="Bold" Background="#FF61FF17"/>
+            <Button Content="Show operations" x:Name="btnShowO" Margin="36,330,555,33" Click="btnShowO_Click" FontSize="18" FontWeight="Bold" Background="#FF64FF1C"/>
+            <Button Content="Move operation" x:Name="btnMoveO" Margin="434,330,147,47" Click="btnMoveO_Click" FontSize="18" FontWeight="Bold" Background="#FF5FF718"/>
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>
