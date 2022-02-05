@@ -1,4 +1,4 @@
 # SIMS
 
 Faculty wpf project.
-Username is MarkoMarkovic and password is 123.
+Credentials for patient app is MarkoMarkovic and 123.
